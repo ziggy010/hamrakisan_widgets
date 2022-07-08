@@ -31,3 +31,10 @@ const kVideoDescSubText = TextStyle(
   fontSize: 12,
   fontFamily: 'poppins',
 );
+
+var kStatusText = TextStyle(
+  color: Colors.white,
+  fontSize: 15.sp,
+  fontFamily: 'poppins',
+  fontWeight: FontWeight.bold,
+);

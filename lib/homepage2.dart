@@ -4,6 +4,7 @@ import 'package:hamrakisan_widgets/components/hot_products.dart';
 import 'package:hamrakisan_widgets/components/review_box.dart';
 import 'package:hamrakisan_widgets/components/video_desc.dart';
 import 'package:hamrakisan_widgets/homepage3.dart';
+import 'package:hamrakisan_widgets/homepage4.dart';
 
 class Homepage2 extends StatelessWidget {
   static const String id = 'Homepage2';
@@ -19,18 +20,26 @@ class Homepage2 extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, Homepage3.id);
               },
-              child: ReviewBox(
-                fullname: 'Risab Tajale',
-                initialRating: 4,
-                reviewPara:
-                    'One of the promising farm in the country, fast deliveries love the service. The products are fresh and the price is affordable.',
-                date: 'May 20, 2020',
+              child: CircleAvatar(
+                child: Padding(
+                  padding: const EdgeInsets.all(6.0),
+                  child: Image.asset(
+                    'lib/images/profile.png',
+                  ),
+                ),
+                radius: 40,
+                backgroundColor: Colors.lightGreen,
               ),
             ),
             SizedBox(
               height: 30.h,
             ),
-            HotProducts(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, Homepage4.id);
+              },
+              child: HotProducts(),
+            ),
           ],
         ),
       ),

@@ -42,6 +42,9 @@ class DottedContainer extends StatelessWidget {
               height: 10.h,
             ),
             ReusableButtons(
+              onTap: () {
+                print("presed");
+              },
               buttonText: Text(
                 'Browse',
                 style: kButtonText.copyWith(

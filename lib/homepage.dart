@@ -8,6 +8,8 @@ import 'package:hamrakisan_widgets/components/reusable_textfield.dart';
 import 'package:hamrakisan_widgets/components/three_textfield.dart';
 import 'package:hamrakisan_widgets/constant.dart';
 import 'package:hamrakisan_widgets/homepage2.dart';
+import 'package:hamrakisan_widgets/product_information.dart';
+import 'package:hamrakisan_widgets/reviewpage.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = 'HomepageScreen';
@@ -22,6 +24,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.grey.shade900,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -41,6 +44,9 @@ class _HomePageState extends State<HomePage> {
               height: 20.h,
             ),
             ReusableButtons(
+              onTap: () {
+                Navigator.pushNamed(context, ReviewPage.id);
+              },
               buttonText: Text(
                 'Login',
                 style: kButtonText.copyWith(
@@ -56,6 +62,9 @@ class _HomePageState extends State<HomePage> {
               height: 20.h,
             ),
             ReusableIconButtons(
+              onTap: () {
+                Navigator.pushNamed(context, ProductInformation.id);
+              },
               buttonText: Text(
                 '9813110577',
                 style: kButtonText.copyWith(

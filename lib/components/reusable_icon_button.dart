@@ -7,6 +7,7 @@ class ReusableIconButtons extends StatelessWidget {
   final int buttonWidth;
   final Widget buttonIcon;
   final Color buttonColor;
+  final VoidCallback onTap;
 
   ReusableIconButtons({
     required this.buttonText,
@@ -14,11 +15,12 @@ class ReusableIconButtons extends StatelessWidget {
     required this.buttonWidth,
     required this.buttonIcon,
     required this.buttonColor,
+    required this.onTap,
   });
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         height: buttonHeight.h,
         width: buttonWidth.h,
